@@ -1,0 +1,32 @@
+# spring:
+#   application:
+#     name: data_sync-service
+#   datasource:
+#     driver-class-name: org.postgresql.Driver
+#     username: postgres
+#     url: "jdbc:postgresql://localhost:5432/test_db"
+#     password: root
+#   jpa:
+#     properties:
+#       hibernate:
+#         dialect: org.hibernate.dialect.PostgreSQLDialect
+#     show-sql: ${POSTGRES_DB_SHOW_SQL:true}
+
+# springdoc:
+#   swagger-ui:
+#     path: /swagger-ui.html
+# server:
+#   port: 8080
+#   servlet:
+#     context-path: /data-sync-service
+
+# logging:
+#   level:
+#     root: INFO
+
+#esHost: ${ES_HOST:http://10.10.144.161:9200}
+#esPassword: ${ES_PASSWORD:ruzHTAV2wj@B5AqNE}
+#esUsername: ${ES_USERNAME:masterDev}
+#
+#logging.level.org.springframework.data.elasticsearch.core: DEBUG
+#logging.level.org.springframework.data.elasticsearch.client.WIRE: trace

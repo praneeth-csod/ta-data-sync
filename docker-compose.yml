@@ -13,12 +13,12 @@ services:
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://host.docker.internal:9092
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
       KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
 
-  connect:
+  kafka-connect:
     image: debezium/connect:2.5
     depends_on:
       - kafka
@@ -65,9 +65,9 @@ services:
     image: obsidiandynamics/kafdrop
     restart: always
     ports:
-      - "9000:9000"
+      - "9090:9000"
     environment:
-      KAFKA_BROKER_CONNECT: localhost:9092
+      KAFKA_BROKER_CONNECT: kafka:9092
       JVM_OPTS: "-Xms32M -Xmx64M"
     depends_on:
       - kafka

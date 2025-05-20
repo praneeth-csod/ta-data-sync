@@ -9,11 +9,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="job-requisition-sync" />
         <module name="ta-data-sync" />
+        <module name="data_sync_service" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="data_sync_service" options="-parameters" />
       <module name="job-requisition-sync" options="-parameters" />
       <module name="ta-data-sync" options="-parameters" />
     </option>

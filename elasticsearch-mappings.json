@@ -1,0 +1,47 @@
+{
+    "mappings": {
+        "properties": {
+            "id": { "type": "keyword" },
+            "tenant_id": { "type": "keyword" },
+            "parent_job_id": { "type": "keyword" },
+            "job_title": { 
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword"
+                    }
+                }
+            },
+            "supervisory_orgs_id": { "type": "keyword" },
+            "reference_id": { "type": "keyword" },
+            "management_level": { "type": "keyword" },
+            "skill_level": { "type": "keyword" },
+            "visibility": { "type": "keyword" },
+            "external_url": { "type": "keyword" },
+            "status": { "type": "keyword" },
+            "revoked_date": { "type": "date" },
+            "job_start_type": { "type": "keyword" },
+            "job_start_date": { "type": "date" },
+            "job_type": { "type": "keyword" },
+            "compensation_type": { "type": "keyword" },
+            "pay_range_enabled": { "type": "boolean" },
+            "fixed_compensation": { "type": "double" },
+            "min_compensation": { "type": "double" },
+            "max_compensation": { "type": "double" },
+            "weekly_hours": { "type": "integer" },
+            "duration_unit": { "type": "keyword" },
+            "duration": { "type": "integer" },
+            "hiring_type": { "type": "keyword" },
+            "number_of_hires": { "type": "integer" },
+            "location_type": { "type": "keyword" },
+            "location_id": { "type": "keyword" },
+            "is_relocation_required": { "type": "boolean" },
+            "employee_benefits_required": { "type": "boolean" },
+            "visa_included": { "type": "boolean" },
+            "created_by": { "type": "keyword" },
+            "updated_by": { "type": "keyword" },
+            "created_timestamp": { "type": "date" },
+            "updated_timestamp": { "type": "date" }
+        }
+    }
+} 

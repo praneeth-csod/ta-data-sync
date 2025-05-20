@@ -1,0 +1,17 @@
+{
+    "name": "elasticsearch-sink",
+    "config": {
+        "connector.class": "io.confluent.connect.elasticsearch.ElasticsearchSinkConnector",
+        "tasks.max": "1",
+        "topics": "postgres.public.job_requisitions,postgres.public.job_requisition_skills",
+        "connection.url": "http://elasticsearch:9200",
+        "type.name": "_doc",
+        "key.ignore": "true",
+        "schema.ignore": "true",
+        "transforms": "unwrap",
+        "transforms.unwrap.type": "io.debezium.transforms.ExtractNewRecordState",
+        "transforms.unwrap.drop.tombstones": "false",
+        "transforms.unwrap.delete.handling.mode": "rewrite",
+        "behavior.on.null.values": "ignore"
+    }
+} 
