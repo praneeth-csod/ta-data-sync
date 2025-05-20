@@ -1,0 +1,10 @@
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: job-requisition-consumer-group
+      auto-offset-reset: earliest
+
+elasticsearch:
+  url: http://localhost:9200
+  index: vc_ta_job_internal

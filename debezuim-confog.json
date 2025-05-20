@@ -1,0 +1,21 @@
+{
+  "name": "pg-job-requisitions-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "database.hostname": "postgres",
+    "database.port": "5432",
+    "database.user": "user",
+    "database.password": "password",
+    "database.dbname": "datasync",
+    "database.server.name": "datasync_server",
+    "plugin.name": "pgoutput",
+    "slot.name": "job_requisitions_slot",
+    "publication.name": "job_requisitions_pub",
+    "table.include.list": "public.job_requisitions,public.job_requisition_skills",
+    "topic.prefix": "datasync",
+    "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "key.converter.schemas.enable": false,
+    "value.converter.schemas.enable": false
+  }
+}
